@@ -1,0 +1,110 @@
+.container {
+    width: 100%;
+    height: 107px;
+    background-color: #C07979;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.content {
+    height: 107px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.btn:hover {
+    text-decoration: underline;
+}
+
+.navbar {
+    padding: 0 1rem;
+    border: #fff;
+    border-bottom: white;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.navbar_nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+
+    width: 100%;
+    background-color: #C07979;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+}
+
+.navbar_nav.active {
+    transform: translateY(0%);
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar_nav li {
+    padding: 10px;
+    background-color: #C07979;
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar_nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.medics {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -500px;
+    margin: 40px;
+}
+
+.medics_link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+
+}
+
+.medics_link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.logo {
+    background-color: transparent;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+    .medics {
+        position: relative;
+        left: -500px;
+    }
+}
