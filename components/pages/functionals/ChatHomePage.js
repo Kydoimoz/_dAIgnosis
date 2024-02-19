@@ -35,7 +35,7 @@ export default function ChatHomePage() {
                     {notficationCount}
                 </span>
             </div>
-            <div className={`${classes.slider} ${isSliderVisible ? classes.sliderVisible : ''}`}>
+            <div className={`${classes.slider} ${isSliderVisible ? classes.sliderVisible : classes.slidernotvisible}`}>
                 <div className={classes.content}>
                     <div className={classes.name}>
                         <span>dAIgnosis - AI ChatBot</span>

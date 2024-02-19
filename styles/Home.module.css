@@ -98,9 +98,12 @@
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
   padding-top: 25px;
   border-radius: 7px;
+  animation: hover 0.3s ease-in-out;
 }
 
-
+.flexbox:hover{
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.7);
+}
 
 .title {
   text-align: center;
