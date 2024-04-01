@@ -1,0 +1,49 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.entry_content {
+    background: #fff;
+    padding: 20px;
+    width: 500px;
+    height: 50vh;
+    border-radius: 8px;
+    text-align: center;
+    color: #333;
+    padding-top: 50px;
+}
+
+@media (min-width: 1230px) and (max-width: 1280px) {
+    .close_modal {
+        position: absolute !important;
+        right: 33% !important;
+        top: 30% !important;
+    }
+}
+
+.close_modal {
+    position: absolute !important;
+    right: 42% !important;
+    top: 30% !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

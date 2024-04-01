@@ -1,0 +1,49 @@
+.hoverable:hover {
+    background-color: rgba(154, 5, 5, 0.74);
+    border-radius: 7px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.profile_flex {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    flex-direction: row;
+
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.name:hover {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+
+.alterImg {
+    padding-left: 15px;
+    width: 40px;
+
+}
+
+.rotateImg {
+    transition: transform 0.5s ease;
+    transform: rotate(180deg);
+}
+
+.line {
+    color: white;
+}
+
+.line::before {
+    content: "";
+    width: 200px;
+    height: 2px;
+    background-color: white;
+
+    color: white;
+}
