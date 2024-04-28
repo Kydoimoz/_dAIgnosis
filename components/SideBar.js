@@ -7,9 +7,52 @@ import { useEffect } from 'react';
 import activateLinks from '../utils/navigation';
 import { Montserrat } from "next/font/google";
 import { useState } from "react";
+import { useSession, getSession } from "next-auth/react";
 import MenuIcon from "./MenuIcon";
 const montserrat = Montserrat({ subsets: ["latin"], weight: "600" });
 export default function SideBar() {
+    const { data: session } = useSession();
+    const signedIn = session?.user;
+    const [parsedSession, setParsedSession] = useState(null);
+    const router = useRouter();
+    //session handling
+
+
+    // Store session data in localStorage when session changes
+    useEffect(() => {
+        if (session) {
+            localStorage.setItem("session", JSON.stringify(session.user));
+        }else {
+            localStorage.removeItem("session");
+        }
+    }, [session]);
+
+    // Retrieve session data from localStorage on initial load
+    useEffect(() => {
+        const storedSessionData = localStorage.getItem("session");
+        if (session && storedSessionData) {
+            try {
+                const parsedSession = JSON.parse(storedSessionData);
+                console.log(parsedSession);
+                setParsedSession(parsedSession);
+            } catch (err) {
+                console.error(err);
+            }
+        }
+        console.log(storedSessionData);
+    }, []);
+
+    useEffect(() => {
+      const checkSession = async () => {
+        try {
+          const serverSession = await getSession(); 
+        } catch (err) {
+          console.error('Error checking session:', err);
+        }
+      };
+  
+      checkSession();
+    }, [router]);
     const [activeIndex, setActiveIndex] = useState(0);
     const [clickedIndex, setClickedIndex] = useState(0);
     const [isHovering, setIsHovering] = useState(false);
@@ -115,8 +158,20 @@ export default function SideBar() {
                         <div className={styles.flexprofile}>
                             <Image src="/images/random.jpg" width={44} height={44} style={{ borderRadius: "66px", marginLeft: "-25%", display: "flex", alignItems: "baseline", marginTop: "10%" }} />
                             <label className={styles.info} for="text-align">
-                                <span className={styles.spanText}>Max Mustermann</span>
-                                <span>Patient</span>
+                                {
+                                   session && parsedSession ? (
+                                        <>
+                                        <span className={styles.spanText}>{parsedSession.firstName + " " + parsedSession.surname}</span>
+                                        <span>Patient</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                        <span className={styles.spanText}>User</span>
+                                        <span>Patient</span>
+                                        </>
+                                    )
+                                }
+                           
                             </label>
                         </div>
                     </div>

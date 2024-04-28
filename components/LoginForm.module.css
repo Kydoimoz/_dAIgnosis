@@ -1,0 +1,222 @@
+.container{
+    max-width: 100vw!important;
+    max-height: 100vh!important;
+
+}
+.main {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.background {
+    background-color: #bd8977b9;
+    width: 55%;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+    width: 33%;
+    height: fit-content;
+    /* letter-spacing: 0.2rem;*/
+    font-family: "Montserrat", "sans-serif";
+    font-size: 1.2em;
+    color: #AB3B3B;
+}
+.content > h1{
+    position: relative;
+    margin-bottom: 50px;
+}
+.main_heading {
+    text-transform: uppercase;
+    position: relative;
+    left: 60%;
+    right: 50%;
+    transform: translateX(-50%)!important;
+}
+.span_heading{
+    text-transform: initial;
+    position: relative;
+    top: 50%;
+}
+
+.main_heading>span {
+    text-transform: center;
+}
+.desc{
+    margin-top: 50px;
+    width: 500px;
+    text-align: center;
+    position: relative;
+    left: 60%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+.guidance_span{
+    text-align: center;
+}
+.log_in{
+    width: 700px;   
+    text-align: center;
+    position: relative;
+    left: 60%;
+    margin-top: 70px;
+    right: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+.info_container{
+    text-align: center;
+    width: 40%;
+    padding-top: 6%;
+}
+.section_heading{
+    position: relative;
+    left: 60%;
+    right: 50%;
+    transform: translateX(-50%);
+    color: #AB3B3B;
+    font-size: 2.3em;
+}
+.below_content{
+    max-width: 100vw;
+    max-height: 100vh;
+    position: relative;
+    padding-top: 50px;
+    left: 60%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+.input_container > input{
+    margin-bottom: 15px;
+}
+.submit_input{
+    padding: 15px;
+    width: 293px;
+    font-size: 1rem;
+    height: 48.88px;
+    border: 1px solid #c5c5c5;
+    appearance: none;
+    outline: none;
+    -webkit-appearance: none;
+    background: linear-gradient(#c4c0c0 0 0) bottom/0% 2px no-repeat;
+    transition: all .2s ease-in-out;
+}
+.submit_input:focus{
+    background-size: 100% 2px
+}
+.submit_input::placeholder{
+    color: #BBBBBB;
+}
+.signup_section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.pw_toggle{
+    display: inline;
+    position: relative;
+    right: 6%;
+
+}
+.container_label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.container_label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 20px;
+    user-select: none;
+    margin-top: 20px;
+    left: 30%;
+    right: 0;
+    transform: translateX(230%);
+}
+
+
+.check_input ~ .checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    background: #606062;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.30), 0px 1px 1px rgba(0,5);
+}
+
+
+.check_input:checked ~ .checkmark{
+    background-image: linear-gradient(#AB3B3B,#AB3B3B);
+}
+
+
+.check_input:checked ~ .checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid white;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+}
+.newsletter_container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-wrap: wrap;
+    width: 60%;
+}
+.newsletter_container > p{
+    margin-top: 15px;
+    text-wrap: wrap;
+    width: 60%;
+    position: relative;
+    right: -50%;
+    text-align: start;
+}
+.btn{
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #AB3B3B;
+    appearance: none;
+    outline: none;
+    border: 1px solid #AB3B3B;
+    color: white;
+    width: 272px;
+    border-radius: 2px;
+    margin: 20px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.btn:hover{
+    width: 297px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+}
+.error{
+    position: absolute;
+    top: -20px;
+    color: red;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+}

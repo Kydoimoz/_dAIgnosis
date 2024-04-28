@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 
 function Layout({ children, showFooter = true }) {
     const router = useRouter();
-    const hideHeaderFooterRoutes = ["/signup", "/chat"];
+    const hideHeaderFooterRoutes = ["/signup", "/chat", "/login"];
 
     const shouldHideHeaderFooter = hideHeaderFooterRoutes.includes(router.pathname);
 

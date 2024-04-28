@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function SelectDropDown() {
     const [isRotated, setIsRotated] = useState(false);
@@ -24,7 +25,8 @@ export default function SelectDropDown() {
         console.log("THIS IS FILTER OPTION", filter_option);
     }
     const router = useRouter();
-
+    const { data: session } = useSession();
+    const signedIn = session?.user;
     return (
         <div
             style={{
@@ -53,15 +55,24 @@ export default function SelectDropDown() {
                             width: "400px",
                             right: "-270px"
                         }}
+                    >{signedIn ? (
+                        <div
+                        className={classes.name}
                     >
+
+                        {session?.user?.firstName + " " + session?.user?.surname}
+                        <Image className={classes.alterImg} onClick={handleClick} src="/images/menu.png" width={45} height={15} />
+
+                    </div>
+                    ) : (
                         <div
                             className={classes.name}
                         >
 
-                            Max Mustermann
+                            Menu
                             <Image className={classes.alterImg} onClick={handleClick} src="/images/menu.png" width={45} height={15} />
-
                         </div>
+                    )}
                     </DropdownTrigger>
                     <DropdownMenu
                         onAction={handleFilter}

@@ -37,6 +37,8 @@
     background-color: transparent;
     color: white;
     display: flex;
+    flex-direction: row;
+ 
     align-items: center;
 }
 
@@ -100,6 +102,63 @@
 
 .logo:hover {
     cursor: pointer;
+}
+.sign_field{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.signin_btn{
+    background: linear-gradient(90deg, #C08D8D 0%, #AE5C5C 82%, #A64444 100%);
+    padding: 10px 20px;
+    border-radius: 11px;
+
+    font-weight: light;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    margin-right: 22px;
+}
+
+.or_seperator{
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.signup_btn{
+    background: linear-gradient(90deg, #C08D8D 0%, #AE5C5C 82%, #A64444 100%);
+    padding: 10px 20px;
+    border-radius: 11px;
+    margin-left: 22px;
+    font-weight: light;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.signin_btn:hover{
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.signup_btn:hover{
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.signout_btn{
+    background: linear-gradient(90deg, #C08D8D 0%, #AE5C5C 82%, #A64444 100%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: light;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.signout_btn:hover{
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 @media screen and (max-width: 1400px) {

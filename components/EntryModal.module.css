@@ -6,36 +6,162 @@
     min-height: 100%;
     z-index: 10;
     background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     animation: fadeIn 0.5s ease-in-out;
 }
 
 .entry_content {
     background: #fff;
     padding: 20px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
     width: 500px;
-    height: 50vh;
+    height: 73vh;
     border-radius: 8px;
     text-align: center;
     color: #333;
     padding-top: 50px;
 }
+.txt{
+    background-color: white;
+    resize: none;
+    outline: none;
+    width: 455px;
+    overflow: hidden;
+    border-radius: 11px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-right: 10px;
+    font-size: 14px;
+    padding-bottom: 10px;
+    height: 150px;
+    overflow-wrap: break-word;
+}
+.btn{
+    padding: 7px;
+    font-size: 1.2em;
+    background-color: #AB3B3B;
+    appearance: none;
+    outline: none;
+    border: 1px solid #AB3B3B;
+    color: white;
+    width: 272px;
+    border-radius: 7px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.error_message{
+    color: rgb(216, 38, 38);
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+.entry_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.entry_meds{
+    padding-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding-bottom: 7px;
+}
+.input_time{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 11px;
+    padding: 3px;
+}
+.entry_select {
+    position: relative;
+    padding: 7px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 11px;
+    min-width: 460px;
+     /* Adjust the maximum width as needed */
+    background-color: #fff;
+    color: #333;
+}
 
-@media (min-width: 1230px) and (max-width: 1280px) {
-    .close_modal {
-        position: absolute !important;
-        right: 33% !important;
-        top: 30% !important;
-    }
+.entry_select option {
+    font-size: 16px;
+}
+.flex_items{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+
+}
+.time{
+    width: 100%;
+}
+.stored{
+    display: flex!important;
+    flex-direction: row!important;
+    background-color: #E26D6D;
+    width: 90px;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    border-radius: 11px;
+    justify-content: flex-start;
+    margin-right: 10px;
+}
+.space{
+    margin-left: 10px;
+}
+.entry_select option::after {
+    content: " ";
+    display: block;
+    height: 2px;
+    background-color: #007bff;
+}
+
+.heading{
+    margin-top: -12%;
+    position: relative;
+}
+.pill{
+    display: block;
+    margin-top: 22px;
+}
+
+.heading::after{
+        content: "";
+        display: block;
+        position: absolute; 
+        bottom: -10px; 
+        left: 0;
+        width: 100%; 
+        height: 2px; 
+        background-color: #9E6C6C; 
+    
 }
 
 .close_modal {
-    position: absolute !important;
-    right: 42% !important;
-    top: 30% !important;
+ position: absolute;
+ top: 0%;
+ right: 0%;
+ background-color: #E26D6D;
+ border-top-right-radius: 8px;
+ cursor: pointer;
+}
+.close_modal > label{
+    font-size: 1.7rem;
+    padding-left: 17px;
+    padding-right: 17px;
+    color: white;
+    cursor: pointer;
 }
 
 @keyframes fadeIn {
@@ -45,5 +171,50 @@
 
     to {
         opacity: 1;
+    }
+}
+.spinner_container{
+    position:absolute;
+    right: 50%;
+    left: 50%;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 500px;
+    height: 50vh;
+    border-radius: 8px;
+    text-align: center;
+}
+.spinner {
+    margin-right: 57%;
+    margin-left: 47.7%;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: rgb(192, 108, 108);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+ margin-top: 25%;
+
+    animation: spin 1s linear infinite;
+}
+.spinner_text{
+    font-size: 1.2rem;
+    padding-top: 10px;
+
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@media (min-width: 1230px) and (max-width: 1280px) {
+    .close_modal {
+        position: absolute !important;
+        right: 33% !important;
+        top: 30% !important;
     }
 }

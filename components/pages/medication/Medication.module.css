@@ -16,7 +16,7 @@
     top: 15%;
     left: 10%;
     width: 75vw;
-    height: 160px;
+    height: 130px;
     background-color: white;
     border-radius: 111px !important;
     display: flex !important;
@@ -28,7 +28,7 @@
 .info {
     position: relative;
     left: 115%;
-    top: -90%;
+    top: -91%;
     margin-left: -90px;
 }
 
@@ -42,19 +42,31 @@
     font-size: 20px;
     color: #BB7474;
     letter-spacing: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 77px;
 }
 
 .subinfo>span {
     margin-right: 35px;
 }
+.creds{
+    display: flex;
+    flex-direction: column;
+}
 
 .fetchedinfo {
     color: #CE7575;
-    font-weight: bold;
+  
+    display: flex;
+    flex-direction: column;
 }
-
+.boldtxt{
+    font-weight: bold;
+    color: #CE7575;
+}
 .fetchedinfo>span {
-    margin-right: 40px;
+    margin-right: 110px;
 }
 
 .medics {
@@ -86,7 +98,6 @@
     height: 100px;
 }
 
-
 .flexbox {
     border-radius: 33px;
     width: 600px;
@@ -113,20 +124,7 @@
     padding: 10px 10px;
 }
 
-.metadata>h2::after {
-    content: "";
-    display: block;
-    width: 11%;
-    height: 1px;
-    left: 10%;
-    background-color: black;
-    position: absolute;
-    top: 34%;
-    align-self: center;
-    align-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
+
 
 .date {
     border-radius: 11px;
@@ -178,3 +176,26 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+  @media (min-width: 568px) and (max-width: 1666px){
+    .flexcontainer{
+        padding-top: 33px;
+        gap: 30px;
+        display: flex!important;
+        flex-direction: row!important;
+        margin-left: 15%;
+   
+       }
+       .flexbox{
+        width: 400px!important;
+       }
+  }
+  @media (max-width: 1097px){
+    .flexcontainer{
+margin-left: 25%;;
+   
+       }
+       .flexbox{
+        width: 400px!important;
+       }
+  }

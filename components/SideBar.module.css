@@ -105,7 +105,7 @@
     top: 50%;
     bottom: 50%;
     transform: translateY(-50%);
-    margin-left: 20%;
+    margin-left: 15%;
     margin-right: 15%;
     border-radius: 22px;
     background: rgb(212, 145, 145);
@@ -202,13 +202,15 @@
 .navigation ul {
     position: absolute;
     top: 10%;
-    left: 0;
+    right: 0%;
     width: 100%;
     padding-left: 5px;
     padding-top: 111px;
 
 }
-
+.navigation {
+    margin-right: 25px!important;
+}
 
 .navigation ul li {
     position: relative;
